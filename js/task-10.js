@@ -14,7 +14,7 @@ const destroyBtn = document.querySelector('button[data-destroy]');
 const boxList = document.getElementById('boxes');
 
 const createBoxes = (amount) => {
-    const boxes = document.createDocumentFragment();
+    const boxes = [];
 
     let width = boxDefaultSize;
     let height = boxDefaultSize;
@@ -30,10 +30,10 @@ const createBoxes = (amount) => {
         width += boxSizeStep;
         height += boxSizeStep;
 
-        boxes.appendChild(box);
+        boxes.push(box);
     }
 
-    boxList.appendChild(boxes);
+    boxList.append(...boxes);
 }
 
 const destroyBoxes = () => {

@@ -9,7 +9,7 @@ const onSubmit = (event) => {
     const password = form.elements.password.value;
 
     if (email === '' || password === '') {
-      return alert('All fields are required');
+        return alert('All fields are required');
     }
 
     const userData = {

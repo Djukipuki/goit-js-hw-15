@@ -10,7 +10,7 @@ const colorSpan = document.querySelector('.color');
 const changeColor = () => {
     const hex = getRandomHexColor();
 
-    document.body.style.color = hex;
+    document.body.style.backgroundColor = hex;
     colorSpan.textContent = hex;
 }
 

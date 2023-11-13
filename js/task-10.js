@@ -22,7 +22,7 @@ const createBoxes = (amount) => {
     for (let i = 0; i < amount; i++) {
         const box = document.createElement('div');
 
-        box.style.border = `2px solid ${getRandomHexColor()}`;
+        box.style.backgroundColor = getRandomHexColor();
         box.style.width = `${width}px`;
         box.style.height = `${height}px`;
         box.style.margin = `10px`;
@@ -41,4 +41,4 @@ const destroyBoxes = () => {
 }
 
 createBtn.addEventListener('click', () => createBoxes(inputValue.value));
-destroyBtn.addEventListener('click', destroyBoxes);
+destroyBtn.addEventListener('click', () => destroyBoxes());
